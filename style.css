@@ -1,0 +1,392 @@
+:root {
+  --dark-violet: hsl(278, 68%, 11%);
+  --light-grey: hsl(270, 3%, 87%);
+  --dark-grey: hsl(279, 6%, 55%);
+  --error: hsl(0, 100%, 66%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.container {
+  margin: auto;
+  max-width: 144rem;
+  height: 90rem;
+  display: grid;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.123);
+  grid-template-columns: 1fr 2fr;
+}
+
+.gradient-side {
+  background-image: url("images/bg-main-desktop.png");
+  max-width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transform: translateY(-10%);
+}
+
+.form-container {
+  width: 42rem;
+}
+
+.label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2.5rem;
+  letter-spacing: 0.2rem;
+  color: var(--dark-violet);
+}
+
+.input {
+  width: 100%;
+  height: 3.5rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 1.2rem;
+  margin-top: 1rem;
+}
+.input::placeholder {
+  color: var(--light-grey);
+}
+.input:focus,
+.input:active {
+  outline: none !important;
+  border: 1px solid hsl(249, 99%, 64%);
+}
+.border-error {
+  border: 1px solid var(--error);
+}
+
+.date-cvc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.expiration {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  position: relative;
+}
+
+.submit {
+  width: 100%;
+  height: 4rem;
+  color: #fff;
+  background: var(--dark-violet);
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 6px;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  margin-top: 1rem;
+  grid-column: 1 / span 2;
+}
+
+.error-message__expiration {
+  position: absolute;
+  top: 65%;
+}
+.submit:active,
+.submit:focus {
+  border: 1px solid #a291fe;
+  outline: none !important;
+}
+
+.gradient-side {
+  position: relative;
+}
+
+.front-card-container {
+  position: absolute;
+  top: 22%;
+  left: 28%;
+}
+
+.back-card-container {
+  position: absolute;
+  top: 52%;
+  left: 44%;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.month {
+  position: absolute;
+  right: 14%;
+}
+.year {
+  position: absolute;
+
+  right: 7%;
+}
+
+.front-card,
+.back-card {
+  position: relative;
+}
+
+.front-card::before {
+  content: "";
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  height: 4.4rem;
+  width: 4.4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 222;
+}
+.front-card::after {
+  content: "";
+  position: absolute;
+  top: 3.755rem;
+  left: 8.5rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+.front-card-number {
+  position: absolute;
+  color: var(--light-grey);
+  font-size: 2.6rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  top: 12rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.back-card-number {
+  position: absolute;
+  color: var(--light-grey);
+  top: 45%;
+  right: 12%;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.card-name-date {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  width: 100%;
+  color: var(--light-grey);
+  font-size: 2rem;
+  justify-content: space-around;
+  gap: 10rem;
+}
+
+.clear-container {
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+}
+.main-thank {
+  display: flex;
+  justify-content: flex-start;
+  transform: translateY(8%);
+}
+
+.thank {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.check {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 200px;
+  background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  position: absolute;
+  top: -50%;
+}
+
+.fa-check {
+  position: absolute;
+  font-size: 2.6rem;
+  top: 30%;
+  left: 0;
+  right: 0;
+  color: var(--light-grey);
+
+  text-align: center;
+}
+.thank-heading {
+  font-size: 2.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.thank-para {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--dark-grey);
+  font-weight: 500;
+}
+
+.thank button {
+  width: 32rem;
+}
+
+@media (max-width: 85rem) {
+  .front-card-container {
+    left: 8%;
+  }
+
+  .back-card-container {
+    left: 20%;
+  }
+  .main {
+    margin-left: 12rem;
+  }
+  .form-container {
+    width: 38rem;
+  }
+}
+
+@media (max-width: 62rem) {
+  .container {
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    height: auto;
+  }
+  .gradient-side {
+    height: 45rem;
+    margin-bottom: 2rem;
+  }
+  .main {
+    margin: 3rem auto;
+  }
+  .front-card-container {
+    top: 40%;
+    left: 10%;
+    z-index: 10;
+  }
+
+  .back-card-container {
+    top: 8%;
+    left: 20%;
+  }
+  .card {
+    max-width: 60rem;
+  }
+  .thank {
+    position: absolute;
+    margin-top: 10rem;
+  }
+}
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+}
+
+@media (max-width: 38rem) {
+  .card {
+    width: 30rem;
+  }
+  .front-card-container {
+    top: 50%;
+    left: 5%;
+    z-index: 10;
+  }
+  .container {
+    height: auto;
+  }
+  .back-card-container {
+    top: 8%;
+    left: 16%;
+  }
+  .front-card-number {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    top: 8.5rem;
+  }
+  .front-card::before {
+    top: 2rem;
+    left: 2rem;
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+  .front-card::after {
+    top: 3rem;
+    left: 6.6rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+  }
+
+  .card-name-date {
+    bottom: 2rem;
+    width: 100%;
+    font-size: 1.3rem;
+    gap: 5rem;
+  }
+  .back-card-number {
+    color: rgba(255, 255, 255, 0.9);
+    top: 42.5%;
+  }
+  .gradient-side {
+    height: 22rem;
+  }
+  .form-container {
+    width: 30rem;
+    margin-top: 7rem;
+  }
+  .thank {
+    position: absolute;
+    margin-top: 10rem;
+  }
+  .thank-para {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--dark-grey);
+    font-weight: 500;
+  }
+  .thank button {
+    width: 90%;
+  }
+}

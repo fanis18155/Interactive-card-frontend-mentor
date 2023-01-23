@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/caffe5116a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="gradient-side"
+        role="img"
+        aria-label="purple color gradient background"
+      >
+        <div class="cards">
+          <div class="front-card-container">
+            <div class="front-card">
+              <img
+                src="images/bg-card-front.png"
+                alt="front side image of credit card"
+                class="card"
+              />
+              <p class="front-card-number">0000 0000 0000 0000</p>
+              <div class="card-name-date">
+                <p class="name">Stephen King</p>
+                <p class="date">
+                  <span class="month">00 /</span><span class="year">00</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="back-card-container">
+            <div class="back-card">
+              <img
+                src="images/bg-card-back.png"
+                alt="back side image of credit car"
+                class="card"
+              />
+              <p class="back-card-number">000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <!-- add main thank above -->
+        <div class="form-container">
+          <!-- add clear-container above -->
+          <div class="card-inputs card-inputs__name">
+            <label for="cardholder" class="label">cardholder name</label>
+            <input
+              spellcheck="false"
+              type="text"
+              id="cardholder"
+              class="input input-cardholder-name"
+              placeholder="e.g. Stephen King"
+              data-error="false"
+            />
+          </div>
+          <div class="card-inputs card-inputs__number">
+            <label for="card-number" class="label">card number</label>
+            <input
+              spellcheck="false"
+              type="text"
+              id="card-number"
+              class="input input-card-number"
+              placeholder="e.g 1234 5678 9123 0000"
+              maxlength="19"
+              data-error="false"
+            />
+          </div>
+          <div>
+            <div class="date-cvc">
+              <label class="label" for="exp-date">exp.date(mm/yy)</label>
+              <label class="label" for="cvc">cvc</label>
+              <div class="expiration error">
+                <div class="month-container">
+                  <input
+                    data-error="false"
+                    spellcheck="false"
+                    type="text"
+                    id="exp-date"
+                    class="input exp-date-input exp-date-month"
+                    placeholder="MM"
+                    maxlength="2"
+                  />
+                </div>
+                <div class="year-container">
+                  <input
+                    data-error="false"
+                    spellcheck="false"
+                    type="text"
+                    id="exp-date-yy"
+                    class="input exp-date-input exp-date-year"
+                    placeholder="YY"
+                    maxlength="2"
+                  />
+                </div>
+              </div>
+              <div class="cvc-container">
+                <input
+                  spellcheck="false"
+                  type="text"
+                  class="input cvc"
+                  id="cvc"
+                  placeholder="e.g 123"
+                  maxlength="3"
+                  data-error="false"
+                />
+              </div>
+            </div>
+          </div>
+          <button class="submit">Confirm</button>
+        </div>
+        <div class="thank clear-container">
+          <!-- remove clear container above -->
+          <div class="check"><i class="fa-solid fa-check"></i></div>
+          <h1 class="thank-heading">Thank you!</h1>
+          <p class="thank-para">We've added your card details</p>
+          <button class="submit continue">Continue</button>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a target="_blank" href="https://github.com/fanis18155"
+          >Github profile</a
+        >.
+      </div>
+    </div>
+  </body>
+</html>
